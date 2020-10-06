@@ -9,6 +9,12 @@
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
   crossorigin="anonymous"
 />
+<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+
 <link
   href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
   rel="stylesheet"
@@ -17,6 +23,421 @@
   href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
   rel="stylesheet"
 />
+
+<style type="text/css">
+
+.footerh2{
+  font-size: 1rem;
+}
+
+i{
+  color: #59d6ff;
+}
+
+
+.end{
+  font-family: 'Karla';
+  padding-top: 30px;
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 10.2em;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+.text_1 {
+  font: 400 6rem 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+
+.text_1::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font: 400 10px 'Merienda One', Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom:100px;
+  width: 100%;
+  background-color: #1E1E1E;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-list {
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  text-align: center;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+  color: #59d6ff;
+}
+
+.nav-list a:hover {
+  background: black;
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('header1.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /*background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);*/
+}
+
+.welcome-section > p {
+  font-weight: 200;
+  font-family: 'Karla', sans-serif;
+  color:white;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
+
+/* Projects section */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: #1e1e1e;;
+}
+
+.projects-section-header {
+  font-family: 'Karla', sans-serif;
+  max-width: 550px;
+  margin: 0 auto 4rem auto;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: #1E1E1E;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+#para
+{ color:#feb236;
+  font-size:1.3em;
+   
+}
+.code {
+  color:var(--main-gray);
+transition: color 0.3s ease-in;
+}
+
+.project:hover .code {
+  color:#feb236;
+  font-size:1.3em;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-gray);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--main-red);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Contact section */
+
+.contact-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('header2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+
+}
+
+.contact-links {
+  font-size: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: #1E1E1E;
+  border-top: 1px solid white;
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
 <link rel="icon"  href="logo.png">
 <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
@@ -46,6 +467,8 @@
 <!-- START WELCOME SECTION -->
 
 <section id="welcome-section" class="welcome-section">
+  <h1><span class="text_1">Hey, I am Anjali ! </span></h1> <br>
+  <p class="love" style="text-align: center;">I am a Student And I Love to Write, What I Feel.</p>
   <h1>Hey, I'm <span id="name">Anjali</span>!</h1>
   <p id="about" style="text-align: center;">I am a student and I love to write what I feel!</p>
 </section>
@@ -55,62 +478,63 @@
 <!-- START PROJECTS SECTION -->
 
 <section id="projects" class="projects-section">
+  <h2 class="projects-section-header">These are Some of My Poetries</h2>
   <h2 class="projects-section-header">My Poetry</h2>
 
   <div class="projects-grid">
 
      <a> 
 
-     	<img  src="./IMG-20200709-WA0025.jpg" width="100"  alt="project"/>
+     	<img  src="poem1.png" width="100"  alt="project"/>
       
       </a>
 
 
     <a> 
 
-    	<img  src="./IMG-20200709-WA0026.jpg"  alt="project"/>
+    	<img  src="poem2.png"  alt="project"/>
       
       </a>
 
 
       <a> 
 
-    	<img  src="./IMG-20200709-WA0027.jpg"  alt="project"/>
+    	<img  src="poem3.png"  alt="project"/>
       
       </a>
 
  
    <a> 
 
-    	<img  src="./IMG-20200709-WA0028.jpg"  alt="project"/>
+    	<img  src="poem4.png"  alt="project"/>
       
       </a>
 
 
      <a> 
 
-    	<img  src="./IMG-20200709-WA0029.jpg"  alt="project"/>
+    	<img  src="poem5.png"  alt="project"/>
       
       </a>
 
 
      <a> 
 
-      <img  src="./IMG-20200709-WA0030.jpg"  alt="project"/>
+      <img  src="poem6.png"  alt="project"/>
       
       </a>
 
 
      <a> 
 
-      <img  src="./IMG-20200708-WA0017.jpg"  alt="project"/>
+      <img  src="poem8.png"  alt="project"/>
       
       </a>
 
 
       <a> 
 
-      <img  src="./IMG-20200709-WA0014.jpg"  alt="project"/>
+      <img  src="poem7.png"  alt="project"/>
       
       </a>
 
@@ -182,11 +606,11 @@
 
 <section id="contact" class="contact-section">
   <div class="contact-section-header">
-    <h2>Let's work together...</h2>
-    <p>How do you take your coffee?</p>
+    <h2>Let's work together</h2>
+    <p class="end">How do you take your coffee?</p>
   </div>
   <div class="contact-links">
-  <!--  <a
+  <!--<a
       href="https://facebook.com/freecodecamp"
       target="_blank"
       class="btn contact-details"
@@ -204,13 +628,13 @@
       target="_blank"
       class="btn contact-details"
       ><i class="fab fa-twitter"></i> Twitter</a
-    > -->
+    >-->
     <a href="mailto:anjaliporwal2002@gmail.com" class="btn contact-details"
       >Email me</a
     >
-    <!-- <a href="tel:+919696872391" class="btn contact-details"
-      ><i class="fas fa-mobile-alt"></i> Call me</a
-    > -->
+    <!--<a href="tel:+919696872391" class="btn contact-details"
+      ><i class="fa fa-mobile-alt"></i> Call me</a
+    >-->
   </div>
 </section>
 
