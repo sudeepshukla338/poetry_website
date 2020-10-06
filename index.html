@@ -9,6 +9,12 @@
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
   crossorigin="anonymous"
 />
+<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+
 <link
   href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
   rel="stylesheet"
@@ -19,6 +25,77 @@
 />
 
 <style type="text/css">
+
+.footerh2{
+  font-size: 1rem;
+}
+
+i{
+  color: #59d6ff;
+}
+
+
+.end{
+  font-family: 'Karla';
+  padding-top: 30px;
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 10.2em;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+.text_1 {
+  font: 400 6rem 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+
+.text_1::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+
+
+
+
+
+
 	
 :root {
   --main-white: #f0f0f0;
@@ -99,7 +176,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Raleway', sans-serif;
+  font: 400 10px 'Merienda One', Helvetica, sans-serif;
   font-weight: 700;
   text-align: center;
 }
@@ -109,7 +186,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.2rem;
+  font-size: 3rem;
 }
 
 ul {
@@ -130,19 +207,22 @@ img {
 
 .nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
+  margin-bottom:100px;
   width: 100%;
-  background: rgb(0,100,175);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  background-color: #1E1E1E;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
 .nav-list {
+  font-family: 'Karla', sans-serif;
   display: flex;
-  margin-right: 2rem;
+  text-align: center;
 }
 
 @media (max-width: 28.75em) {
@@ -159,10 +239,11 @@ img {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
+  color: #59d6ff;
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  background: black;
 }
 
 /* Welcome section */
@@ -172,17 +253,22 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
   height: 100vh;
-  background-color:#47739B;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('header1.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   /*background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);*/
 }
 
 .welcome-section > p {
-  font-size: 3rem;
   font-weight: 200;
-  font-style: italic;
-  color: yellow;
+  font-family: 'Karla', sans-serif;
+  color:white;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
 
 /* Projects section */
@@ -190,13 +276,13 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-blue);
+  background: #1e1e1e;;
 }
 
 .projects-section-header {
-  max-width: 640px;
-  margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
+  font-family: 'Karla', sans-serif;
+  max-width: 550px;
+  margin: 0 auto 4rem auto;
 }
 
 @media (max-width: 28.75em) {
@@ -227,7 +313,7 @@ img {
 }
 
 .project {
-  background: var(--main-gray);
+  background: #1E1E1E;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
@@ -286,15 +372,18 @@ transition: color 0.3s ease-in;
 /* Contact section */
 
 .contact-section {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 100%;
+  width: auto;
   height: 80vh;
-  padding: 0 2rem;
-  background: var(--main-gray);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('header2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
 
 .contact-section-header > h2 {
@@ -308,10 +397,11 @@ transition: color 0.3s ease-in;
 }
 
 .contact-section-header > p {
-  font-style: italic;
+
 }
 
 .contact-links {
+  font-size: 5px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -337,8 +427,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: var(--main-gray);
-  border-top: 4px solid var(--main-red);
+  background: #1E1E1E;
+  border-top: 1px solid white;
 }
 
 footer > p {
@@ -386,8 +476,8 @@ footer i {
 <!-- START WELCOME SECTION -->
 
 <section id="welcome-section" class="welcome-section">
-  <h1>Hey I am Anjali</h1> <br>
-  <p style="text-align: center;">     I am a Student And I Love to Write ,What I Feel !</p>
+  <h1><span class="text_1">Hey, I am Anjali ! </span></h1> <br>
+  <p class="love" style="text-align: center;">I am a Student And I Love to Write, What I Feel.</p>
 </section>
 
 <!-- END WELCOME SECTION -->
@@ -395,62 +485,62 @@ footer i {
 <!-- START PROJECTS SECTION -->
 
 <section id="projects" class="projects-section">
-  <h2 class="projects-section-header">These are Some of My Poetry</h2>
+  <h2 class="projects-section-header">These are Some of My Poetries</h2>
 
   <div class="projects-grid">
 
      <a> 
 
-     	<img  src="./IMG-20200709-WA0025.jpg" width="100"  alt="project"/>
+     	<img  src="poem1.png" width="100"  alt="project"/>
       
       </a>
 
 
     <a> 
 
-    	<img  src="./IMG-20200709-WA0026.jpg"  alt="project"/>
+    	<img  src="poem2.png"  alt="project"/>
       
       </a>
 
 
       <a> 
 
-    	<img  src="./IMG-20200709-WA0027.jpg"  alt="project"/>
+    	<img  src="poem3.png"  alt="project"/>
       
       </a>
 
  
    <a> 
 
-    	<img  src="./IMG-20200709-WA0028.jpg"  alt="project"/>
+    	<img  src="poem4.png"  alt="project"/>
       
       </a>
 
 
      <a> 
 
-    	<img  src="./IMG-20200709-WA0029.jpg"  alt="project"/>
+    	<img  src="poem5.png"  alt="project"/>
       
       </a>
 
 
      <a> 
 
-      <img  src="./IMG-20200709-WA0030.jpg"  alt="project"/>
+      <img  src="poem6.png"  alt="project"/>
       
       </a>
 
 
      <a> 
 
-      <img  src="./IMG-20200708-WA0017.jpg"  alt="project"/>
+      <img  src="poem8.png"  alt="project"/>
       
       </a>
 
 
       <a> 
 
-      <img  src="./IMG-20200709-WA0014.jpg"  alt="project"/>
+      <img  src="poem7.png"  alt="project"/>
       
       </a>
 
@@ -522,11 +612,11 @@ footer i {
 
 <section id="contact" class="contact-section">
   <div class="contact-section-header">
-    <h2>Let's work together...</h2>
-    <p>How do you take your coffee?</p>
+    <h2>Let's work together</h2>
+    <p class="end">How do you take your coffee?</p>
   </div>
   <div class="contact-links">
-  <!--  <a
+  <!--<a
       href="https://facebook.com/freecodecamp"
       target="_blank"
       class="btn contact-details"
@@ -544,13 +634,13 @@ footer i {
       target="_blank"
       class="btn contact-details"
       ><i class="fab fa-twitter"></i> Twitter</a
-    > -->
+    >-->
     <a href="mailto:anjaliporwal2002@gmail.com" class="btn contact-details"
       ><i class="fas fa-at"></i> Send a mail</a
     >
-    <!-- <a href="tel:+919696872391" class="btn contact-details"
-      ><i class="fas fa-mobile-alt"></i> Call me</a
-    > -->
+    <!--<a href="tel:+919696872391" class="btn contact-details"
+      ><i class="fa fa-mobile-alt"></i> Call me</a
+    >-->
   </div>
 </section>
 
