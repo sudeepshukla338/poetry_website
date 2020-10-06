@@ -17,8 +17,14 @@
   href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
   rel="stylesheet"
 />
+<link rel="icon"  href="logo.png">
+
+
+
 
 <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 	
 :root {
   --main-white: #f0f0f0;
@@ -50,6 +56,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
+
 
 /* A few media query to set some font sizes at different screen sizes.
  * This helps automate a bit of responsiveness.
@@ -126,6 +134,16 @@ img {
   width: 100%;
 }
 
+#name{
+   font-family: 'Sansita Swashed', cursive,sans-serif;
+    color: #8DBBD0;
+}
+
+#about{
+  font-family:'Satisfy', cursive,sans-serif;
+  font-size: 2.1em;
+}
+
 /* nav */
 
 .nav {
@@ -162,7 +180,9 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  border: 2px solid  #3b5998;
+    box-shadow: 0 0 15px  white/*#3b5998*/;
+    transition: all 0.5s ease;
 }
 
 /* Welcome section */
@@ -174,7 +194,7 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color:#47739B;
+  background-color:#1D1045;
   /*background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);*/
 }
 
@@ -196,7 +216,9 @@ img {
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
+  font-family: 'Sansita Swashed', cursive,sans-serif;
+  font-size: 3em;
+  border-bottom: 0.6rem solid #6F6F6F;
 }
 
 @media (max-width: 28.75em) {
@@ -241,7 +263,7 @@ img {
 transition: color 0.3s ease-in;
 }
 
-.project:hover .code {
+.project:hover{
   color:#feb236;
   font-size:1.3em;
 }
@@ -368,6 +390,7 @@ footer i {
 <!-- START NAV -->
 
 <nav id="navbar" class="nav">
+  
   <ul class="nav-list">
     <li>
       <a href="#welcome-section">About</a>
@@ -386,8 +409,8 @@ footer i {
 <!-- START WELCOME SECTION -->
 
 <section id="welcome-section" class="welcome-section">
-  <h1>Hey I am Anjali</h1> <br>
-  <p style="text-align: center;">     I am a Student And I Love to Write ,What I Feel !</p>
+  <h1>Hey I am <span id="name">Anjali</span></h1> <br>
+  <p style="text-align: center;" id="about">     I am a Student And I Love to Write ,What I Feel !</p>
 </section>
 
 <!-- END WELCOME SECTION -->
@@ -395,7 +418,7 @@ footer i {
 <!-- START PROJECTS SECTION -->
 
 <section id="projects" class="projects-section">
-  <h2 class="projects-section-header">These are Some of My Poetry</h2>
+  <h2 class="projects-section-header"> My Poetry</h2>
 
   <div class="projects-grid">
 
